@@ -1,0 +1,36 @@
+{
+  "name": "@liuhlightning/bcrypt",
+  "version": "0.0.0",
+  "description": "bcrypt in full typescript",
+  "keywords": [
+    "bcrypt",
+    "typescript"
+  ],
+  "author": "Alex",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ZhoufangErqiangu/bcrypt.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "push": "yarn version --patch && git push",
+    "test": "ts-node ./tests/index.test.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  }
+}
