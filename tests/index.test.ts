@@ -33,7 +33,7 @@ describe("bcrypt unit test", () => {
     const s2 = generateSalt();
     notEqual(s1, s2, "Salt should be different");
   });
-  test("strem to word", () => {
+  test("stream to word", () => {
     const p = Uint8Array.from(Buffer.from(TEST_PASSWORD, "utf-8"));
     const r1 = stream2Word(p, 0);
     strictEqual(r1, 0x70617373, "First word should be 0x70617373");
