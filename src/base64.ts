@@ -1,5 +1,10 @@
 import { BASE64_ALPHABET, BASE64_ALPHABET_BCRYPT } from "./constant";
 
+/**
+ * Convert base64 to bcrypt base64
+ * @param s base64 string
+ * @returns bcrypt base64 string
+ */
 export function base642Base64BCrypt(s: string): string {
   const base64Map = BASE64_ALPHABET.split("").reduce(
     (prev: Record<string, number>, cur: string, idx: number) => {
@@ -19,6 +24,11 @@ export function base642Base64BCrypt(s: string): string {
   return result.join("");
 }
 
+/**
+ * Convert bcrypt base64 to base64
+ * @param s bcrypt base64 string
+ * @returns base64 string
+ */
 export function base64BCrypt2Base64(s: string): string {
   const base64BCryptMap = BASE64_ALPHABET_BCRYPT.split("").reduce(
     (prev: Record<string, number>, cur: string, idx: number) => {
