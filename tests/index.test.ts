@@ -1,4 +1,4 @@
-import { notEqual, strictEqual } from "node:assert";
+import { notEqual, ok, strictEqual } from "node:assert";
 import test, { describe } from "node:test";
 import {
   GENSALT_DEFAULT_LOG2_ROUNDS,
@@ -105,7 +105,7 @@ describe("bcrypt unit test", () => {
       TEST_PASSWORD,
       "$2a$10$R6297FEswqIxx9CmIQBZlOs6Xvuhbg2FpHBbzdwyOkrfTZRvSJ36m",
     );
-    strictEqual(v, true);
+    ok(v);
   });
 });
 
@@ -113,6 +113,6 @@ describe("bcrypt intergration test", () => {
   test("hash and verify", () => {
     const h = hash(TEST_PASSWORD);
     const v = verify(TEST_PASSWORD, h);
-    strictEqual(v, true);
+    ok(v);
   });
 });
