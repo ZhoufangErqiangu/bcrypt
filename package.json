@@ -1,6 +1,6 @@
 {
   "name": "@liuhlightning/bcrypt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "bcrypt in full typescript",
   "keywords": [
     "bcrypt",
